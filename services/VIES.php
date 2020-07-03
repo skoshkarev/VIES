@@ -42,12 +42,12 @@ class VIES
 		
 		if ($vatNumber)
 		{
+			
 			return $this->_client->checkVat($vatNumber)->valid;
 		}
 		
 		return false;
 	}
-	
 	
 	/**
 	 * Get more information about a given VAT number
