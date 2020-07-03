@@ -36,13 +36,14 @@ class VIES
 	 * @param string $vatNumber		A European VAT number
 	 * @return bool
 	 */
+	
 	public function checkVAT ($vatNumber)
 	{
 		$vatNumber = $this->sanitize($vatNumber);
 		
 		if ($vatNumber)
 		{
-			
+
 			return $this->_client->checkVat($vatNumber)->valid;
 		}
 		
